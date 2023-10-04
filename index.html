@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+</head>
+<style>
+    html{
+        scroll-behavior: smooth;
+    }
+</style>
+<body>
+    
+    <div class="w-full lg;w-full p-5 bg-black flex items-center justify-between sticky top-0">
+        <h1 class="lg:text-3xl text-2xl text-white">ChHi Shoop</h1>
+        <button class="flex gap-1 flex-col" id="menu">
+            <div class="w-1/2 px-4 bg-white h-1 block transition ease" id="1"></div>
+            <div class="w-1/2 px-4 bg-white h-1 block transition ease" id="2"></div>
+            <div class="w-1/2 px-4 bg-white h-1 block transition ease" id="3"></div>
+        </button>
+    </div>
+    <div class="w-full lg:w-full lg:hidden bg-black text-white text-center p-2 border-2 border-white fixed top-[-100%]" id="menubar">
+        <ul>
+            <li><a href="#cart">Go To Cart</a></li>
+        </ul>
+    </div>
+    <div class="w-full lg:w-full">
+        <div class="w-[100%] lg:w-full m-auto flex flex-col-reverse gap-4 lg:flex-row">
+            <div class="w-full lg:w-[20%]" id="cart">
+                <div class="w-full lg:w-[20%] flex flex-col bg-white h-full lg:fixed transition ease" id="wdit">    
+                
+                    <h1 class="text-xl font-bold p-2 lg:bg-teal-300 bg-gray-400">Cart Items</h1>
+                    <ul class="cart-items p-2 flex flex-col gap-1 lg:h-[76vh]">
+                        <!-- li appendchild -->
+                    </ul>
+                    <div class="cart-total bg-teal-500 p-4 text-xl">
+                        total is: $
+                        <span class="item-price"> </span>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full lg:w-4/5 m-auto p-2 lg:p-4" id="menupage">
+                <h1 class="text-xl font-bold p-2 mb-3">Product</h1>
+                <div class="splide" id="slider">
+                    <div class="splide__track">
+                        <div class="splide__list grid grid-cols-1 gap-3 lg:grid-cols-3" id="product">
+                            <!-- array object loop -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/89c89e4827.js" crossorigin="anonymous"></script>   
+</body>
+</html>
